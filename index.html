@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTTECH</title>
+    <link rel="stylesheet" href="btc.css">
+</head>
+
+<body>
+    <header>
+          <a href="index.html" class="logo-container">
+  <div class="logo">
+    <img src="pic/logo.png" alt="Logo">
+  </div>
+  <h1>DTTECH</h1>
+</a>
+
+        <div class="header-info">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <button onclick="searchProducts()">Tìm kiếm</button>
+            </div>
+
+            <div class="info-container">
+                <div class="info-item">
+                    📞 <span>Gọi mua hàng <br> 0123456789</span>
+                </div>
+                <div class="info-item">
+                    📍 <span>Cửa hàng <br> gần bạn</span>
+                </div>
+                <div class="info-item">
+                    🚚 <span>Tra cứu <br> đơn hàng</span>
+                </div>
+            </div>
+
+            <a href="cart.html" class="cart">
+    🛒 <span id="cart-count">1</span>
+</a>
+        </div>
+
+        <div class="theme-toggle">
+            <button id="toggleTheme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner-container">
+        <img src="pic/thang_04_pc_banner_web_collection_1920x420.jpg" alt="Banner Khuyến mãi lớn">
+    </div>
+
+    <!-- Sidebar + Main -->
+    <div class="content">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Danh Mục</h3>
+            <ul>
+                <li><a href="#" onclick="filterCategory('dien-thoai')">📱 Điện thoại, Tablet</a></li>
+                <li><a href="#" onclick="filterCategory('laptop')">💻 Laptop</a></li>
+                <li><a href="#" onclick="filterCategory('am-thanh')">🎧 Âm thanh</a></li>
+                <li><a href="#" onclick="filterCategory('dong-ho-camera')">⌚ Đồng hồ, Camera</a></li>
+                <li><a href="#" onclick="filterCategory('do-gia-dung')">🏠 Đồ gia dụng</a></li>
+                <li><a href="#" onclick="filterCategory('phu-kien')">🔌 Phụ kiện</a></li>
+                <li><a href="#" onclick="filterCategory('pc-man-hinh')">🖥️ PC, Màn hình, Máy in</a></li>
+                <li><a href="#" onclick="filterCategory('tv')">📺 Tivi</a></li>
+                <li><a href="#" onclick="filterCategory('thu-doi')">🔄 Thu cũ đổi mới</a></li>
+                <li><a href="#" onclick="filterCategory('hang-cu')">📱 Hàng cũ</a></li>
+                <li><a href="#" onclick="filterCategory('khuyen-mai')">🎉 Khuyến mãi</a></li>
+                <li><a href="#" onclick="filterCategory('tin-cong-nghe')">📰 Tin công nghệ</a></li>
+            </ul>
+        </div>
+
+        <!-- Main -->
+        <main>
+            <!-- Điện thoại -->
+            <div class="product" data-id="iphone15" data-name="Iphone 15 Pro Max" data-price="29990000" data-category="dien-thoai">
+                <img src="pic/ip15.jpeg" alt="Iphone 15 Pro Max 256GB">
+                <h2>IPhone 15 Pro Max 256GB</h2>
+                <p>Giá: 29.990.000 đ</p>
+                <a href="detail.html?product=iphone15" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="googlepixel" data-name="Google Pixel 9 Pro" data-price="24950000" data-category="dien-thoai">
+                <img src="pic/ggpx.jpg" alt="Google Pixel 9 Pro">
+                <h2>Google Pixel 9 Pro</h2>
+                <p>Giá: 24.950.000 đ</p>
+                <a href="detail.html?product=googlepixel" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="rogphone9pro" data-name="Rog Phone 9 Pro" data-price="27950000" data-category="dien-thoai">
+                <img src="pic/rog9.png" alt="Rog Phone 9 Pro">
+                <h2>Rog Phone 9 Pro</h2>
+                <p>Giá: 27.950.000 đ</p>
+                <a href="detail.html?product=rogphone9pro" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="samsunggalaxys24ultra" data-name="Samsung Galaxy S24 Ultra" data-price="22950000" data-category="dien-thoai">
+                <img src="pic/ss.jpg" alt="Samsung Galaxy S24 Ultra">
+                <h2>Samsung Galaxy S24 Ultra</h2>
+                <p>Giá: 22.950.000 đ</p>
+                <a href="detail.html?product=samsunggalaxys24ultra" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="xiaomi15ultra5g" data-name="Xiaomi 15 Ultra 5G" data-price="31990000" data-category="dien-thoai">
+                <img src="pic/xiao.jpg" alt="Xiaomi 15 Ultra 5G">
+                <h2>Xiaomi 15 Ultra 5G</h2>
+                <p>Giá: 31.990.000 đ</p>
+                <a href="detail.html?product=xiaomi15ultra5g" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="hueweipura70ultra" data-name="Huawei Pura 70 Ultra" data-price="34999000" data-category="dien-thoai">
+                <img src="pic/huawei.jpg" alt="Huawei Pura 70 Ultra">
+                <h2>Huawei Pura 70 Ultra</h2>
+                <p>Giá: 34.999.000 đ</p>
+                <a href="detail.html?product=huaweipura70ultra" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="nubiaredmagic9sproplus" data-name="Nubia Red Magic 9S Pro Plus" data-price="20250000"
+                data-category="dien-thoai">
+                <img src="pic/nubia.webp" alt="Nubia Red Magic 9S Pro Plus">
+                <h2>Nubia Red Magic 9S Pro Plus</h2>
+                <p>Giá: 20.250.000 đ</p>
+                <a href="detail.html?product=nubiaredmagic9sproplus" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="samsunggalaxyzfold6" data-name="Samsung Galaxy Z Fold 6" data-price="35090000" data-category="dien-thoai">
+                <img src="pic/zfold.webp" alt="Samsung Galaxy Z Fold 6">
+                <h2>Samsung Galaxy Z Fold 6</h2>
+                <p>Giá: 35.090.000 đ</p>
+                <a href="detail.html?product=samsunggalaxyzfold6" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <!-- Laptop -->
+            <div class="product" data-id="asusrogscar18" data-name="Laptop ASUS ROG Strix SCAR 18 G835LX SA208W" data-price="124990000"
+                data-category="laptop">
+                <img src="pic/scar18.png" alt="Laptop ASUS ROG Strix SCAR 18 G835LX SA208W">
+                <h2>Laptop ASUS ROG Strix SCAR 18 G835LX SA208W</h2>
+                <p>Giá: 124.990.000 đ</p>
+                <a href="detail.html?product=asusrogscar18" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="asusrogflowz13" data-name="Laptop ASUS ROG Flow Z13 GZ302EA RU145WS" data-price="79990000"
+                data-category="laptop">
+                <img src="pic/rogflowz13_1.png" alt="Laptop ASUS ROG Flow Z13 GZ302EA RU145WS">
+                <h2>Laptop ASUS ROG Flow Z13 GZ302EA RU145WS</h2>
+                <p>Giá: 79.990.000 đ</p>
+                <a href="detail.html?product=asusrogflowz13" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="msistealtha16mercedesamg" data-name="Laptop gaming MSI Stealth A16 Mercedes AMG AI+ A3XWGG 032VN" data-price="78490000"
+                data-category="laptop">
+                <img src="pic/mercedes_1.png" alt="Laptop gaming MSI Stealth A16 Mercedes AMG AI+ A3XWGG 032VN">
+                <h2>Laptop gaming MSI Stealth A16 Mercedes AMG AI+ A3XWGG 032VN</h2>
+                <p>Giá: 78.490.000 đ</p>
+                <a href="detail.html?product=msistealtha16mercedesamg" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="msicyborg15" data-name="Laptop gaming MSI Cyborg 15 B2RWFKG 048VN" data-price="29990000"
+                data-category="laptop">
+                <img src="pic/cyborg15_1.png" alt="Laptop gaming MSI Cyborg 15 B2RWFKG 048VN">
+                <h2>Laptop gaming MSI Cyborg 15 B2RWFKG 048VN</h2>
+                <p>Giá: 29.990.000 đ</p>
+                <a href="detail.html?product=msicyborg15" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="lenovolegion5" data-name="Laptop gaming Lenovo Legion 5 15AHP10 83M0002XVN" data-price="36990000"
+                data-category="laptop">
+                <img src="pic/legion5_1.png" alt="Laptop gaming Lenovo Legion 5 15AHP10 83M0002XVN">
+                <h2>Laptop gaming Lenovo Legion 5 15AHP10 83M0002XVN</h2>
+                <p>Giá: 36.990.000 đ</p>
+                <a href="detail.html?product=lenovolegion5" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="lenovolegionpro7" data-name="Laptop gaming Lenovo Legion Pro 7 16IAX10H 83F5008VVN" data-price="75490000"
+                data-category="laptop">
+                <img src="pic/legion7_1.png" alt="Laptop gaming Lenovo Legion Pro 7 16IAX10H 83F5008VVN">
+                <h2>Laptop gaming Lenovo Legion Pro 7 16IAX10H 83F5008VVN</h2>
+                <p>Giá: 75.490.000 đ</p>
+                <a href="detail.html?product=lenovolegionpro7" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+            <div class="product" data-id="asusrogcetrawireless" data-name="Asus ROG Cetra True Wireless" data-price="1750000"
+                data-category="am-thanh">
+                <img src="pic/cetra_1.jpg" alt="Asus ROG Cetra True Wireless">
+                <h2>Asus ROG Cetra True Wireless</h2>
+                <p>Giá: 1.750.000 đ</p>
+                <a href="detail.html?product=asusrogcetrawireless" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="asusrogtheta" data-name="Tai nghe Asus ROG THETA 7.1" data-price="5990000"
+                data-category="am-thanh">
+                <img src="pic/theta_1.jpg" alt="Tai nghe Asus ROG THETA 7.1">
+                <h2>Tai nghe Asus ROG THETA 7.1</h2>
+                <p>Giá: 5.990.000 đ</p>
+                <a href="detail.html?product=asusrogtheta" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+
+            <div class="product" data-id="microphoneelgatowave3" data-name="Microphone Elgato Wave 3" data-price="3690000"
+                data-category="am-thanh">
+                <img src="pic/elgato_1.jpg" alt="">
+                <h2>Microphone Elgato Wave 3</h2>
+                <p>Giá: 3.690.000 đ</p>
+                <a href="detail.html?product=microphoneelgatowave3" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="microhyperxsolocast" data-name="Micro HyperX SoloCast" data-price="1590000"
+                data-category="am-thanh">
+                <img src="pic/hyperx_1.jpg" alt="Micro HyperX SoloCast">
+                <h2>Micro HyperX SoloCast</h2>
+                <p>Giá: 1.590.000 đ</p>
+                <a href="detail.html?product=microhyperxsolocast" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="lgultrafine27" data-name="Màn hình LG 27US500-W Ultrafine 27 IPS 4K HDR10" data-price="5390000"
+                data-category="pc-man-hinh">
+                <img src="pic/ultrafine_1.jpg" alt="Màn hình LG 27US500-W Ultrafine 27 IPS 4K HDR10">
+                <h2>Màn hình LG 27US500-W Ultrafine 27" IPS 4K HDR10</h2>
+                <p>Giá: 5.390.000 đ</p>
+                <a href="detail.html?product=lgultrafine27" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="lg34gx90saw34" data-name="Màn hình cong LG 34GX90SA-W 34 OLED 2K 240Hz" data-price="24790000"
+                data-category="pc-man-hinh">
+                <img src="pic/W34_1.jpg" alt="Màn hình cong LG 34GX90SA-W 34 OLED 2K 240Hz">
+                <h2>Màn hình cong LG 34GX90SA-W 34" OLED 2K 240Hz</h2>
+                <p>Giá: 24.790.000 đ</p>
+                <a href="detail.html?product=lg34gx90saw34" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="viewsonicvx3219pro" data-name="Màn hình ViewSonic VX3219-2K-PRO-2 32 IPS 2K 165Hz" data-price="7090000"
+                data-category="pc-man-hinh">
+                <img src="pic/vx321_1.png" alt="Màn hình ViewSonic VX3219-2K-PRO-2 32 IPS 2K 165Hz">
+                <h2>Màn hình ViewSonic VX3219-2K-PRO-2 32" IPS 2K 165Hz</h2>
+                <p>Giá: 7.090.000 đ</p>
+                <a href="detail.html?product=viewsonicvx3219pro" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="viewsonicvx3418" data-name="Màn hình cong ViewSonic VX3418C-2K 34 2K 180Hz" data-price="7590000"
+                data-category="pc-man-hinh">
+                <img src="pic/vx341_1.jpg" alt="Màn hình cong ViewSonic VX3418C-2K 34 2K 180Hz">
+                <h2>Màn hình cong ViewSonic VX3418C-2K 34" 2K 180Hz</h2>
+                <p>Giá: 7.590.000 đ</p>
+                <a href="detail.html?product=viewsonicvx3418" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="coolermasternr200p" data-name="Vỏ máy tính Cooler Master MasterBox NR200P White" data-price="2190000"
+                data-category="pc-man-hinh">
+                <img src="pic/cooler_1.png" alt="Vỏ máy tính Cooler Master MasterBox NR200P White">
+                <h2>Vỏ máy tính Cooler Master MasterBox NR200P White</h2>
+                <p>Giá: 2.190.000 đ</p>
+                <a href="detail.html?product=coolermasternr200p" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="microhyperxsolocast" data-name="Vỏ máy tính MIK BARBATOS M WHITE" data-price="1090000"
+                data-category="pc-man-hinh">
+                <img src="pic/mik_1.png" alt="Vỏ máy tính MIK BARBATOS M WHITE">
+                <h2>Vỏ máy tính MIK BARBATOS M WHITE</h2>
+                <p>Giá: 1.090.000 đ</p>
+                <a href="detail.html?product=microhyperxsolocast" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="ugreenroboganmini" data-name="Củ sạc Ugreen RoboGaN Mini CD359 15550 USB-C 30W (Black)" data-price="300000"
+                data-category="phu-kien">
+                <img src="pic/robogan_1.png" alt="Củ sạc Ugreen RoboGaN Mini CD359 15550 USB-C 30W (Black)">
+                <h2>Củ sạc Ugreen RoboGaN Mini CD359 15550 USB-C 30W (Black)</h2>
+                <p>Giá: 300.000 đ</p>
+                <a href="detail.html?product=ugreenroboganmini" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="msisleevebag" data-name="Phụ kiện túi MSI Sleeve Bag" data-price="299000"
+                data-category="phu-kien">
+                <img src="pic/sleevebag.jpg" alt="Phụ kiện túi MSI Sleeve Bag">
+                <h2>Phụ kiện túi MSI Sleeve Bag</h2>
+                <p>Giá: 299.000 đ</p>
+                <a href="detail.html?product=msisleevebag" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+			
+			<div class="product" data-id="elgatostreamdeck" data-name="Phụ kiện Elgato Stream Deck - 15 phím" data-price="1890000"
+                data-category="phu-kien">
+                <img src="pic/stream_1.jpg" alt="Phụ kiện Elgato Stream Deck - 15 phím">
+                <h2>Phụ kiện Elgato Stream Deck - 15 phím</h2>
+                <p>Giá: 3.890.000 đ</p>
+                <a href="detail.html?product=elgatostreamdeck" class="details-button">Thêm vào giỏ hàng</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Cột 1: Liên hệ -->
+            <div class="footer-col">
+                <h3>Liên hệ</h3>
+                <p>📍 Hà Nội</p>
+                <p>📞 Hotline:0123456789 </p>
+                <p>✉️ Email:dttech@gmail.com </p>
+            </div>
+
+            <!-- Cột 2: Chính sách -->
+            <div class="footer-col">
+                <h3>Chính sách</h3>
+                <ul>
+                    <li><a href="#">Đổi trả hàng</a></li>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                    <li><a href="#">Vận chuyển</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Mạng xã hội -->
+            <div class="footer-col">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Eri.stupid4162005#">🌐 Facebook</a><br>
+                    <a href="#">▶️ YouTube</a><br>
+                    <a href="https://www.instagram.com/duckthink.05/?fbclid=IwY2xjawO3QrJleHRuA2FlbQIxMABicmlkETFrclF0TlNoeWlIUlRKMEE2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHopRqgb49LNjtzZzWNe4hyMwF_n9bxY7ioS0VZjrn_G8xs3kugroWVGmn0wp_aem_HAQFXFNg-RmQu1cZzsnnMA#">📸 Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 DTTECH. All rights reserved.</p>
+        </div>
+    </footer>
+	<script src="btj.js"></script>
+</body>
+</html>

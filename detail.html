@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER (GIỐNG TRANG CHỦ) ===== -->
+<header>
+  <a href="index.html" class="logo-container">
+  <div class="logo">
+    <img src="pic/logo.png" alt="Logo">
+  </div>
+  <h1>DTTECH</h1>
+</a>
+	
+<div class="header-info">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <button onclick="searchProducts()">Tìm kiếm</button>
+            </div>
+
+  <div class="info-container">
+                <div class="info-item">
+                    📞 <span>Gọi mua hàng <br> 0123456789</span>
+                </div>
+                <div class="info-item">
+                    📍 <span>Cửa hàng <br> gần bạn</span>
+                </div>
+                <div class="info-item">
+                    🚚 <span>Tra cứu <br> đơn hàng</span>
+                </div>
+            </div>
+
+            <a href="cart.html" class="cart">
+    🛒 <span id="cart-count">0</span>
+</a>
+        </div>
+
+  <div class="theme-toggle">
+    <button id="toggleTheme">🌙</button>
+  </div>
+</header>
+	
+	    <!-- Banner -->
+    <div class="banner-container">
+        <img src="pic/thang_04_pc_banner_web_collection_1920x420.jpg" alt="Banner Khuyến mãi lớn">
+    </div>
+
+<!-- ===== CONTENT ===== -->
+<div class="content">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Danh Mục</h3>
+            <ul>
+                <li><a href="index.html" onclick="filterCategory('dien-thoai')">📱 Điện thoại, Tablet</a></li>
+                <li><a href="index.html" onclick="filterCategory('laptop')">💻 Laptop</a></li>
+                <li><a href="index.html" onclick="filterCategory('am-thanh')">🎧 Âm thanh</a></li>
+                <li><a href="index.html" onclick="filterCategory('dong-ho-camera')">⌚ Đồng hồ, Camera</a></li>
+                <li><a href="index.html" onclick="filterCategory('do-gia-dung')">🏠 Đồ gia dụng</a></li>
+                <li><a href="index.html" onclick="filterCategory('phu-kien')">🔌 Phụ kiện</a></li>
+                <li><a href="index.html" onclick="filterCategory('pc-man-hinh')">🖥️ PC, Màn hình, Máy in</a></li>
+                <li><a href="index.html" onclick="filterCategory('tv')">📺 Tivi</a></li>
+                <li><a href="index.html" onclick="filterCategory('thu-doi')">🔄 Thu cũ đổi mới</a></li>
+                <li><a href="index.html" onclick="filterCategory('hang-cu')">📱 Hàng cũ</a></li>
+                <li><a href="index.html" onclick="filterCategory('khuyen-mai')">🎉 Khuyến mãi</a></li>
+                <li><a href="index.html" onclick="filterCategory('tin-cong-nghe')">📰 Tin công nghệ</a></li>
+            </ul>
+        </div>
+  <!-- SIDEBAR -->
+
+  <!-- MAIN -->
+  <main id="detail">
+    <!-- JS render ở đây -->
+  </main>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-container">
+            <!-- Cột 1: Liên hệ -->
+            <div class="footer-col">
+                <h3>Liên hệ</h3>
+                <p>📍 Hà Nội</p>
+                <p>📞 Hotline: 012345789 </p>
+                <p>✉️ Email:dttech@gmail.com </p>
+            </div>
+
+            <!-- Cột 2: Chính sách -->
+            <div class="footer-col">
+                <h3>Chính sách</h3>
+                <ul>
+                    <li><a href="#">Đổi trả hàng</a></li>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                    <li><a href="#">Vận chuyển</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Mạng xã hội -->
+            <div class="footer-col">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Eri.stupid4162005#">🌐 Facebook</a><br>
+                    <a href="#">▶️ YouTube</a><br>
+                    <a href="https://www.instagram.com/duckthink.05/?fbclid=IwY2xjawO3QrJleHRuA2FlbQIxMABicmlkETFrclF0TlNoeWlIUlRKMEE2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHopRqgb49LNjtzZzWNe4hyMwF_n9bxY7ioS0VZjrn_G8xs3kugroWVGmn0wp_aem_HAQFXFNg-RmQu1cZzsnnMA#">📸 Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 DTTECH. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="details.js"></script>
+</body>
+</html>
